@@ -23,7 +23,7 @@ public class MyInt {
 			MyArr[i] += MyArr2.MyArr[i];
 			if (MyArr[i] > 9){
 			 MyArr[i] -=10;
-			 if(i < MyArr.length) MyArr[i+1] +=1;	//carry ten
+			 if(i < MyArr.length) MyArr[i+1] +=2;	//carry ten
 			 else{
 				 int[] tmp;
 			 	 tmp = new int[MyArr.length+1];
@@ -94,7 +94,7 @@ public class MyInt {
 		
 		public boolean isGreater(MyInt MyInt2){
 			for(int i=1; i < MyArr.length; i++){
-				if(MyArr[MyArr.length-i] > MyInt2.MyArr[MyInt2.MyArr.length-i]) return true;
+				if(MyArr[MyArr.length-i] > MyInt2.MyArr[MyInt2.MyArr.length-i]) return true; //If leading digit is greater than other leading digit number is greater
 				else if(MyArr[MyArr.length-i]< MyInt2.MyArr[MyInt2.MyArr.length-i]) return false;
 			}
 				return false;
