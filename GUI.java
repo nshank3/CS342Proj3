@@ -17,7 +17,7 @@ public class GUI extends JFrame{
 		setTitle("RSA Encrpytion/Decryption");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new GridLayout(2,2));
-		setSize(400, 400);
+		setSize(350, 250);
 		setResizable(true);
 		menuBar = new GUIMenu();
 		setJMenuBar(menuBar);
@@ -40,5 +40,15 @@ public class GUI extends JFrame{
 	
 	public static void main(String [] argv) {
 		GUI gui = new GUI();
+		
+		HugeInt a = new HugeInt("110");
+		HugeInt b = new HugeInt("99");
+		System.out.println(a.subtract(b));
+		System.out.println(new HugeInt(a.add(b)));
+		System.out.println(new HugeInt(a.multiply(b)));
+		System.out.println(a.divide(b));
+		System.out.println(a.mod(b));
+		
+		System.out.println("Hello");
 	}
 }

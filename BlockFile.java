@@ -16,29 +16,20 @@ public class BlockFile extends JPanel{
 	private String blockFile;
 	private int blockSize;
 	
-	private JTextField blockSizeInput;
 	private JLabel title;
 	private JButton loadFileButton;
-	private JButton saveBlockFileButton;
 	
 	BlockFile() {
-		setLayout(new GridLayout(4,0));
+		setLayout(new FlowLayout(FlowLayout.CENTER));
 		setBorder(new BevelBorder(BevelBorder.LOWERED));
-		setSize(500, 100);
 		
 		title = new JLabel("Block File");
 		title.setHorizontalAlignment(JLabel.CENTER);
 		add(title);
 		
-		blockSizeInput = new JTextField();
-		add(blockSizeInput);
-		
 		loadFileButton = new JButton("Load Block File");
 		add(loadFileButton);
-		
-		saveBlockFileButton = new JButton("Save Block File");
-		add(saveBlockFileButton);
-		
+
 		enableActionListeners();
 	}
 	
@@ -52,6 +43,5 @@ public class BlockFile extends JPanel{
 	}
 	
 	public void enableActionListeners() {
-		
 	}
 }
